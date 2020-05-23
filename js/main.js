@@ -26,24 +26,15 @@ document.addEventListener("touchstart",function () {
     document.getElementsByClassName("swiper-slide-active")[0].onclick = showImg;
 });
 amostralJ.onclick = hideImg;
-function showImgPreview() {
-    swiper.autoplay.stop();
-    document.getElementsByClassName("swiper-slide-active")[0].getElementsByTagName("img")[1].style.display = "flex";
-    document.getElementsByClassName("swiper-slide-prev")[0].getElementsByTagName("img")[1].style.display = "none";
-    document.getElementsByClassName("swiper-slide-next")[0].getElementsByTagName("img")[1].style.display = "none";
-    document.getElementsByClassName("swiper-slide-duplicate")[0].getElementsByTagName("img")[1].style.display = "none";
-}
+
 document.addEventListener("touchmove",function(){
     swiper.autoplay.start();
     hideImg();
-    document.getElementsByClassName("swiper-slide-active")[0].getElementsByTagName("img")[1].style.display = "none";
-    document.getElementsByClassName("swiper-slide-duplicate")[0].getElementsByTagName("img")[1].style.display = "none";
 });
 function showImg() {
     amostralJ.style.display = "flex";
     var srcImgAtual = document.getElementsByClassName("swiper-slide-active")[0].getElementsByTagName("img")[0].src; //pega so a img qua ta na transicao
     swiper.autoplay.stop();
-    console.log(srcImgAtual);
     if (srcImgAtual == 'file:///home/jeferson/Documents/Tatunage/Site/img/tatto/bull.svg' || srcImgAtual == 'https://jfe.netlify.app/img/tatto/bull.svg')
         amostralI.src = './img/amostral.png';
     else if (srcImgAtual == 'file:///home/jeferson/Documents/Tatunage/Site/img/tatto/vintage.svg' || srcImgAtual == 'https://jfe.netlify.app/img/tatto/vintage.svg')
