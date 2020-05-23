@@ -18,17 +18,29 @@ var swiper = new Swiper('.swiper-container', {
     },
 });
 
-var amostralJ = document.getElementById('janelaAmostral');
-var amostralI = document.getElementById('imgAmostral');
-document.addEventListener("touchstart", showImg);
-
-
+// var amostralJ = document.getElementById('janelaAmostral');
+// var amostralI = document.getElementById('imgAmostral');
+// document.addEventListener("touchstart", showImg);
+document.addEventListener("touchstart",function () {
+    document.getElementsByClassName("swiper-slide-active")[0].onclick = showImgPreview;
+});
+function showImgPreview() {
+    swiper.autoplay.stop();
+    document.getElementsByClassName("swiper-slide-active")[0].getElementsByTagName("img")[1].style.display = "flex";
+    document.getElementsByClassName("swiper-slide-prev")[0].getElementsByTagName("img")[1].style.display = "none";
+    document.getElementsByClassName("swiper-slide-next")[0].getElementsByTagName("img")[1].style.display = "none";
+    document.getElementsByClassName("swiper-slide-duplicate")[0].getElementsByTagName("img")[1].style.display = "none";
+}
+document.addEventListener("touchmove",function(){
+    swiper.autoplay.start();
+    document.getElementsByClassName("swiper-slide-active")[0].getElementsByTagName("img")[1].style.display = "none";
+    document.getElementsByClassName("swiper-slide-duplicate")[0].getElementsByTagName("img")[1].style.display = "none";
+});
 function showImg() {
     for (let index = 0; index < 10000; index++) {
         document.addEventListener("touchmove", hideImg);
         document.addEventListener("touchend", hideImg);
     }
-
     amostralJ.style.display = "flex";
     var srcImgAtual = document.getElementsByClassName("swiper-slide-active")[0].getElementsByTagName("img")[0].src; //pega so a img qua ta na transicao
     swiper.autoplay.stop();
@@ -43,19 +55,11 @@ function showImg() {
         amostralI.src = './img/amostral4.png';
     else
         amostralI.src = '';
-
 }
 
 function hideImg() {
     amostralJ.style.display = "none";
     swiper.autoplay.start();
-}
-var amostral = document.getElementById('testee');
-var oteste = document.getElementsByClassName("swiper-slide-active")[0].getElementsByTagName("img")[0];
-oteste.onclick =function teste() {
-    console.log(amostral);
-    swiper.autoplay.stop();
-    amostral.style.display="flex";
 }
 
 
