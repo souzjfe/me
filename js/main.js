@@ -35,6 +35,7 @@ function showImgPreview() {
 }
 document.addEventListener("touchmove",function(){
     swiper.autoplay.start();
+    hideImg();
     document.getElementsByClassName("swiper-slide-active")[0].getElementsByTagName("img")[1].style.display = "none";
     document.getElementsByClassName("swiper-slide-duplicate")[0].getElementsByTagName("img")[1].style.display = "none";
 });
@@ -43,13 +44,13 @@ function showImg() {
     var srcImgAtual = document.getElementsByClassName("swiper-slide-active")[0].getElementsByTagName("img")[0].src; //pega so a img qua ta na transicao
     swiper.autoplay.stop();
     console.log(srcImgAtual);
-    if (srcImgAtual == 'file:///home/jeferson/Documents/Tatunage/Site/img/tatto/bull.svg')
+    if (srcImgAtual == 'file:///home/jeferson/Documents/Tatunage/Site/img/tatto/bull.svg' || srcImgAtual == 'https://jfe.netlify.app/img/tatto/bull.svg')
         amostralI.src = './img/amostral.png';
-    else if (srcImgAtual == 'file:///home/jeferson/Documents/Tatunage/Site/img/tatto/vintage.svg')
+    else if (srcImgAtual == 'file:///home/jeferson/Documents/Tatunage/Site/img/tatto/vintage.svg' || srcImgAtual == 'https://jfe.netlify.app/img/tatto/vintage.svg')
         amostralI.src = './img/amostral2.png';
-    else if (srcImgAtual == 'file:///home/jeferson/Documents/Tatunage/Site/img/tatto/rebellion.png')
-        amostralI.src = './img/amostral3.png';
-    else if (srcImgAtual == 'file:///home/jeferson/Documents/Tatunage/Site/img/tatto/fox.png')
+    else if (srcImgAtual == 'file:///home/jeferson/Documents/Tatunage/Site/img/tatto/rebellion.png' || srcImgAtual == 'https://jfe.netlify.app/img/tatto/rebellion.png')
+        amostralI.src = './img/amostral3.png'; 
+    else if (srcImgAtual == 'file:///home/jeferson/Documents/Tatunage/Site/img/tatto/fox.png' || srcImgAtual == 'https://jfe.netlify.app/img/tatto/fox.png')
         amostralI.src = './img/amostral4.png';
     else
         amostralI.src = '';
