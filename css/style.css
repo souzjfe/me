@@ -1,0 +1,80 @@
+body {
+    background-image: url("../img/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.swiper-container {
+    width: 100%;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    z-index: 0;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 250px;
+    height: 350px;
+    background:#fff;
+    text-align: center;
+    border: black;
+    z-index: 1;
+    display: flex;
+}
+
+.swiper-slide img {
+    margin: auto;
+    max-width: 240px;
+    max-height: 340px;
+    z-index: 2;
+}
+
+#janelaAmostral {
+    display: none;
+    position: absolute;
+    z-index: 3;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#imgAmostral {
+    margin: auto;
+    width: 90%;
+    max-width: 800px;
+    padding: 5%;
+
+}
+#testee {
+  display: none;
+  position: absolute;
+  z-index: 5;
+
+}
+
+.redes-sociais ul {
+    position: fixed center;
+    margin-top: 20px;
+    padding: 0;
+    text-align: center;
+    z-index: -1;
+}
+
+.redes-sociais ul li {
+    display: inline-flex;
+    padding: 5px;
+}
+
+.redes-sociais img {
+    height: 30px;
+    width: 30px;
+}
