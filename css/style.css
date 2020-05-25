@@ -18,6 +18,7 @@ body {
    user-select: none;
 }
 
+
 .swiper-container {
     width: 100%;
     padding-bottom: 50px;
@@ -50,7 +51,8 @@ body {
     z-index: 3;
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgb (217, 217, 217); 
+    background-color: hsla(360,100%,2%,0.8)
 }
 
 #imgAmostral {

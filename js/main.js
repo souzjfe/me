@@ -18,6 +18,12 @@ var swiper = new Swiper('.swiper-container', {
     },
 });
 
+document.onmousedown=disableclick;
+function disableclick(event)
+{
+  if(event.button==2)
+     return false;    
+}
 var amostralJ = document.getElementById('janelaAmostral');
 var amostralI = document.getElementById('imgAmostral');
 document.addEventListener("touchstart",function () {
